@@ -57,7 +57,9 @@
 					</div>
 				</div>
 			</div>
-			<!--    -->
+			<!--以上是第二和第三个账单，可以删除.-->
+			
+			<!--  以下是另一个类,即未订购的商品  -->
 			<div class="products products_hack">
 				<div class="products_left">
 					<img src="img/2-小圆馒头.png"/>
@@ -75,10 +77,64 @@
 				</div>
 			</div>
 			
+			<!--  以上是另一个类,即未订购的商品  -->
+			
+			<!-- 以下是一键订货 -->
+			<div style="position: absolute;bottom: 91px;color:#fff;">
+				<img src="img/index_bottom.png" style="width:100%;height:3px;"/>
+			</div>
+			<div class="footer_accounts">
+				<span class="total">合计：</span>
+				<i> &yen</i>
+				<span class="accounts_price">1062.8</span>
+			</div>
+			<button class="accounts">一键订货</button>
+			<button disabled="disabled" class="accounts"id="OneKeyOrder" style="display: none;">一键订货</button>
+			<!-- 一键订货End -->
 				
+			
 		</section>
 		<footer>
 			
+			<!-- 以下是底部导航 -->
+			<div class="index_bottom">
+				<div class="index_bottom_left">
+					<dl>
+						<dt>
+							<img src="img/cart_active.gif"/>
+							<img src="img/cart.gif" style="display: none;"/>
+						</dt>
+						<dd><p>订购</p></dd>
+					</dl>
+				</div>
+				<div class="cut-off"></div>
+				<div class="index_bottom_right">
+					<dl>
+						<dt>
+							<img src="img/bill.gif"/>
+							<img src="img/bill_active.gif" style="display: none;"/>
+						</dt>
+						<dd><p>账单</p></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 底部导航End -->
+			
+			
 		</footer>
+		<!-- 以下是遮罩层和超额提示 -->
+			<div class="shade" id="shada"</div>
+			<div class="OverfullDebt" id="OverfullDebt">
+				<div class="OverfullDebt_top">
+					<p>温馨提示</p>
+				</div>
+				<div class="OverfullDebt_middle">
+					<p class="p1">您累计欠款已超额,</p>
+					<p class="p2">支付后才能完成本次订货哦!</p>
+				</div>
+				<div class="OverfullDebt_bottom">
+					<p>去支付</p>
+				</div>
+			</div>
 	</body>
 </html>

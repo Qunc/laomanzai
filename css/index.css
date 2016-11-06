@@ -89,6 +89,193 @@ section .products{
 	border-top: 1px solid #b9b9b9;
 	margin-top: 1.4rem;
 }
+/* ////首页底部的一键订货//// */
+.footer_accounts{
+	/*flex: 1;*/
+	width: 97.33%;
+	padding-left: 1rem;
+	position: absolute;
+	bottom: 50px;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+}
+.footer_accounts .total{
+	font-size: 1.4rem;
+	line-height: 4rem;
+	color: #333;
+	
+}
+.footer_accounts .accounts_price{
+	font-size: 1.6rem;
+	line-height: 4.3rem;
+	color:#ff461d;
+	font-family: arial;
+	
+}
+.footer_accounts i{
+	font-size: 1.4rem;
+	line-height: 4rem;
+	font-family: PingFang SC Regular;
+	color:#ff461d;
+}
+.accounts{
+	position: absolute;
+	right:0;
+	bottom: 51px;
+	margin-right: 0px;
+	border: 1px solid #ff461d;
+	background: #ff461d;
+	height:43px;
+	margin-top: 0px;
+	border:0;
+	width: 12.8rem;
+	font-size: 1.6rem !important;
+	color: #fff;
+	font-family: PingFang SC Regular;
+	
+}
+#OneKeyOrder{
+	background: #817a7a;
+}
+.index_bottom{
+	width: 100%;
+	height: 49px;
+	background: #f9f9f9;
+	position: absolute;
+	bottom: 0;
+}
+.index_bottom .cut-off{
+	width:1px;
+	height:32px;
+	background:#ccc;
+	position:absolute;
+	left:50%;
+	top: 50%;
+	margin-top: -16px;
+}
+.index_bottom_left{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+	
+}
+.index_bottom_left dl dt img{
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -18px;
+	margin-left: -11px;
+}
+
+.index_bottom_left dl dd p{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -10px;
+	margin-top: 8px;
+	color: #52be44;
+	font-size: 12px;
+	
+}
+.index_bottom_right{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+	
+}
+.index_bottom_right dl dt img{
+	width: 18px;
+	height: 22px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -18px;
+	margin-left: -9px;
+}
+.index_bottom_right dl dd p{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -10px;
+	margin-top: 8px;
+	color: #b9b9b9;
+	font-size: 12px;
+}
+/* ///////首页的遮罩和超额提示/////// */
+.shade{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 1;
+	z-index: 99999;
+
+}
+.OverfullDebt{
+	 position:fixed;
+	 top:15rem;left:50%;
+	 margin-left:-15rem;
+	 width: 30rem;
+	 height:15.7rem;
+	 background: #fff;
+	 z-index: 51;
+	 border-radius: 4px;
+}
+.OverfullDebt_top{
+	width: 100%;
+	height:4.4rem;
+	text-align: center;
+	
+	font-size: 16px;
+
+	font-weight: bold;
+	position: relative;
+}
+.OverfullDebt_top p{
+	color: #333;
+	width: 100%;
+	position: absolute;
+	line-height: 0;
+	bottom: 0;
+	font-family: PingFang SC Bold;
+}
+.OverfullDebt_middle{
+	width: 100%;
+	height:6.6rem;
+	text-align: center;
+	color: #333;
+	font-size: 14px;
+}
+.OverfullDebt_middle .p1{
+	font-family: PingFang SC Medium;
+	padding-top: 19px;
+	line-height: 14px;
+}
+.OverfullDebt_middle .p2{
+	font-family: PingFang SC Medium;
+	line-height: 4px;
+}                                       
+.OverfullDebt_bottom{
+	width: 100%;
+	height:4.7rem;
+	text-align: center;
+	background: #fff;
+	font-size: 14px;
+	border-top:1px solid #ccc;
+	font-weight: bold;
+	border-radius: 4px;
+}
+.OverfullDebt_bottom p{
+	color: #52be44;
+	line-height: 4.7rem;
+	font-family: PingFang SC Bold;
+	
+}
+
 
 /* //////////我的账单页面/////////  */
 .header_title{
@@ -179,7 +366,7 @@ section .products{
 	
 	position: absolute;
 	top:50%;
-	right:26px;
+	right:30px;
 	margin-top:-8.5px;
 	font-size: 15px;
 }
@@ -188,7 +375,7 @@ section .products{
 	height: 12px;
 	position: absolute;
 	top:50%;
-	right:10px;
+	right:14px;
 	margin-top:-6px;
 	
 }
@@ -240,7 +427,7 @@ section .details{
 	
 }
 .indent_bottom p{
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 2.2rem;
 }
 section .indent_bottom p:nth-last-of-type(1){
@@ -251,6 +438,8 @@ section .indent_bottom p:nth-last-of-type(1){
 	font-weight: 550;
 	position: absolute;
 	right: 20px;
+	font-size: 15px;
+	font-family: PingFang SC Heavy;
 }
 .indent_bottom:nth-last-of-type(1) .border_bottom{
 	left: 0;
