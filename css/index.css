@@ -1,14 +1,99 @@
 body,html,p{margin:0;padding: 0;}
 html,body{
 	font-size: 62.5%;
+	color:#333;
+	font-family: PingFang SC Medium;
 }
 body{
 	background: #ebebeb;	
 }
+/* //////////首页///////////  */
+section .products{
+	width: 100%;
+	height: 10rem;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	
+}
+.products .products_left{
+	width: 18%;
+	height: 100%;
+	position: relative;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	float: left;
+}
+.products .products_left img{
+	width: 8rem;
+	height: 7rem;
+	position: absolute;
+	top:50%;
+	right: 12.4875px;
+	margin-top: -3.5rem;
+}
+.products .products_right{
+	width: 69%;
+	height: 7.1rem;
+	float: left;
+	padding-top: 1.5rem;
+	padding-bottom: 1.4rem;
+	padding-right: 1.5rem;
+	position: relative;
+}
+.products .products_right p{
+	font-size: 15px;
+	
+	
+}
+.products .products_right p.price{
+	font-size: 19px;
+	color: #ff461d;
+	margin-top: 3.6rem;
+	font-family: PingFang SC Heavy;
+}
+.products .products_right .order_button button{
+	position: absolute;		
+	bottom: 1rem;
+	right:1.1rem;
+	width: 10.7rem;
+	height: 3rem;
+	outline:none;
+	border: 2px solid #ff5566;
+	border-radius: 4px;
+	background: #fff;
+	color:#ff5566;
+	font-size:14px;
+	
+}
+.products .products_right .order_num{
+	position: absolute;
+	right: 1.2rem;
+	bottom: 0;
+	display: none;
+}
+.products .products_right .order_num span{
+	font-size: 13px;
+}
+
+.products .products_right .order_num input{
+	outline:none;
+	width: 67px;
+	height: 30px;
+	border:2px solid #b9b9b9;
+	border-radius: 4px;
+	position: relative;
+	bottom: 1rem;
+	text-align: center;
+}
+.products_hack{
+	border-top: 1px solid #b9b9b9;
+	margin-top: 1.4rem;
+}
+
 /* //////////我的账单页面/////////  */
 .header_title{
 	width: 100%;
-	height:4.5rem;
+	height:4.2rem;
 	background: #fff;
 	text-align: center;
 	font-size: 16px;
@@ -17,36 +102,157 @@ body{
 	
 }
 .header_title span{
-	line-height: 4.5rem;
+	letter-spacing: 1px;
+	line-height: 4.3rem;
 }
 .bill{
 	width: 100%;
-	height:7rem;
+	height:6.8rem;
 	background: #fff;
 	border-top:1px solid #ccc;
 	border-bottom:1px solid #ccc;
 	margin-top:1.3rem;
-}
-.bill_left{
-	width: 73.6%;
-	height: 100%;
+	position: relative;
 	padding-left: 3.5rem;
-	float: left;
 }
-.bill_left p{
-	
-	line-height:7.2rem;
+.bill p{
+	line-height:6.8rem;
 	font-size: 18px;
+}
+.bill button{
+	/*display: inline-block;*/
+	position: absolute;
+	right:5rem;
+	top:50%;
+	margin-top: -1.4rem;
+	outline:none;
+	width: 87px;
+	height: 28px;
+	border: 0;
+	border-radius: 4px;
+	background: #ff461d;
+	color:#fff;
+	font-size:14px;
+}
+.indent{
+	width:100%;
+	height:7rem;
+}
+
+
+
+
+.indent_content{
+	position: relative;
+	width: 90.67%;
+	height: 7rem;
+	padding-left: 3.5rem;
+	font-size:15px;
+	background: #f9f9f9;
+}
+.indent_content .box_one{
+	padding-top: 1.2rem;
+}
+.indent_content .box_one .box_one_right{
+	color: #686868;
+}
+.indent_content:nth-last-of-type(1) .border_bottom{
+	left: 0;
+	width:100%;
+	
+}
+#Go_indent_details{
+
+	width: 85px;
+	height: 30px;
+	position: absolute;
+	right:0;
+	top:20px;
+}
+#Go_indent_details a{
 	color: #333;
-	font-family: PingFang SC Medium;
-}
-
-.bill_right{
-	width: 26.4%;
+	display: flex;
+	width: 100%;
 	height: 100%;
-	float: right;
 }
-.bill_right  button{
-	float: right;
-
+.indent_right{
+	
+	position: absolute;
+	top:50%;
+	right:26px;
+	margin-top:-8.5px;
+	font-size: 15px;
+}
+.indent_content .right_button{
+	width: 10px;
+	height: 12px;
+	position: absolute;
+	top:50%;
+	right:10px;
+	margin-top:-6px;
+	
+}
+.border_bottom{
+	position: absolute;
+	bottom: 0;
+	width:85.33%;
+	border-bottom: 1px solid #ccc;
+}
+/* //////订单详情////// */
+header{
+	position: relative;
+}
+header img{
+	width: 10px;
+	height: 17px;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -8.5px;
+}
+section .details{
+	width: 100%;
+	height:15rem;
+	background: #fff;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	margin-top:1.3rem;
+	position: relative;
+	padding-left: 3.5rem;
+	padding-top: 0.5rem;
+}
+.details p{
+	line-height:3rem;
+	font-size: 15px;
+}
+.details span{
+	color: #686868;
+}
+.indent_bottom{
+	width: 85.07%;
+	height: 3.6rem;
+	padding:1.7rem 2.1rem 1.7rem 3.5rem;
+	color: #686868;
+	background: #f9f9f9;
+	position: relative;
+	font-size: 14px;
+	
+	
+}
+.indent_bottom p{
+	font-size: 14px;
+	line-height: 2.2rem;
+}
+section .indent_bottom p:nth-last-of-type(1){
+	font-size: 13px;
+}
+.indent_bottom .indent_bottom_right{
+	color: #000;
+	font-weight: 550;
+	position: absolute;
+	right: 20px;
+}
+.indent_bottom:nth-last-of-type(1) .border_bottom{
+	left: 0;
+	width:100%;
 }

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>我的账单</title>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>
@@ -12,14 +12,36 @@
 		</header>
 		<section>
 			<div class="bill">
-				<div class="bill_left">
-					<p>总 金 额：</p>
-					
-				</div>
-				<div class="bill_right">
-					<button>立即支付</button>
-				</div>
+				<p>总 金 额：<span>81.16元</span></p><button>立即支付</button>
 			</div>
+			
+			<div class="indent_content">
+				<div class="box_one"><span class="box_one_left">配送日期：</span><span class="box_one_right">2016-11-04</span></div>
+				<div class="box_one"><span class="box_one_left">总 &nbsp;金 &nbsp;额：</span><span class="box_one_right">11.58</span><span class="box_one_right">元</span></div>
+				<div id="Go_indent_details">
+					<a>
+						<div class="indent_right">未支付</div>
+						<div class="indent_right" style="display: none;">已支付</div>
+						<img src="../img/skip.png" class="right_button"/>
+					</a>
+				</div>
+				<div class="border_bottom"></div>
+			</div>
+			
+			<!--以下是第二个账单，可以删除.-->
+			<!--<div class="indent_content">
+				<div class="box_one"><span class="box_one_left">配送日期：</span><span class="box_one_right">2016-11-04</span></div>
+				<div class="box_one"><span class="box_one_left">总 &nbsp;金 &nbsp;额：</span><span class="box_one_right">11.58</span><span class="box_one_right">元</span></div>
+				<div id="Go_indent_details">
+					<a>
+						<div class="indent_right">未支付</div>
+						<div class="indent_right" style="display: none;">已支付</div>
+						<img src="../img/skip.png" class="right_button"/>
+					</a>
+				</div>
+				<div class="border_bottom"></div>
+			</div>-->
+				
 		</section>
 		<footer>
 			

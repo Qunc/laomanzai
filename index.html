@@ -2,31 +2,83 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>快订货</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>
 	<body>
-		<header>
-			<div class="product">
-				<div class="left">
-					<img src="img/2-小圆馒头.png" class="img" />
+		<section>
+			<div class="products">
+				<div class="products_left">
+					<img src="img/2-小圆馒头.png"/>
 				</div>
-				<div class="right">
-					<div class="right_1">
-						<span class="head">{{item.name}}</span>
+				<div class="products_right">
+					<p>巧克力馒头  65g*1  10个/包</p>
+					<p class="price">&yen;6.8</p>
+					<div class="order_button">
+						<button>点击订货</button>
 					</div>
-					<div class="unit">
-						<span>品类：</span><span>{{item.category_name}}</span><span> 单位：</span><span>{{item.unit}}</span>
-					</div>
-					<div class="clearfix">
-						<span class="price">&yen;<i>{{item.price}}</i></span> 
-						<button class="order" id="ordera" ng-if="!item.onEdit && !item.last_buy_quantity" ng-click="order(item.product_id)">点击订货</button>
-						<div class="order_beifen" id="order_beifen" ng-hide="!item.onEdit && !item.last_buy_quantity"><!-- ng-click="order(item.product_id)"-->
-							<input type="number" ng-model="item.last_buy_quantity" class="order_input" ng-blur="input_blur(item.product_id)"/>
-							<div class="order_text" ng-click="clear(item.product_id)">清 零</div>
-						</div>
+					<div class="order_num">
+						<span>订货量：<input/></span>
+						<span>包</span>
 					</div>
 				</div>
 			</div>
-		</header>
+			<!--以下是第二和第三个账单，可以删除.-->
+			<div class="products">
+				<div class="products_left">
+					<img src="img/2-小圆馒头.png"/>
+				</div>
+				<div class="products_right">
+					<p>巧克力馒头  65g*1  10个/包</p>
+					<p class="price">&yen;6.8</p>
+					<div class="order_button">
+						<button>点击订货</button>
+					</div>
+					<div class="order_num">
+						<span>订货量：<input/></span>
+						<span>包</span>
+					</div>
+				</div>
+			</div>
+			<div class="products">
+				<div class="products_left">
+					<img src="img/2-小圆馒头.png"/>
+				</div>
+				<div class="products_right">
+					<p>巧克力馒头  65g*1  10个/包</p>
+					<p class="price">&yen;6.8</p>
+					<div class="order_button">
+						<button>点击订货</button>
+					</div>
+					<div class="order_num">
+						<span>订货量：<input/></span>
+						<span>包</span>
+					</div>
+				</div>
+			</div>
+			<!--    -->
+			<div class="products products_hack">
+				<div class="products_left">
+					<img src="img/2-小圆馒头.png"/>
+				</div>
+				<div class="products_right">
+					<p>巧克力馒头  65g*1  10个/包</p>
+					<p class="price">&yen;6.8</p>
+					<div class="order_button">
+						<button>点击订货</button>
+					</div>
+					<div class="order_num">
+						<span>订货量：<input/></span>
+						<span>包</span>
+					</div>
+				</div>
+			</div>
+			
+				
+		</section>
+		<footer>
+			
+		</footer>
 	</body>
 </html>
