@@ -214,6 +214,7 @@ section .products{
 	opacity: 0.3;
 	z-index: 50;
 	display: none;
+
 }
 .OverfullDebt{
 	 position:fixed;
