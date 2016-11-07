@@ -7,7 +7,24 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	</head>
 	<body>
-		<section>
+		<header>
+			<!-- 以下是超额提示和遮罩层 -->
+			<div class="OverfullDebt" id="Index_OverfullDebt">
+				<div class="OverfullDebt_top">
+					<p>温馨提示</p>
+				</div>
+				<div class="OverfullDebt_middle">
+					<p class="p1">您的累计欠款已超额,</p>
+					<p class="p2">支付后才能完成本次订货哦!</p>
+				</div>
+				<div class="OverfullDebt_bottom">
+					<p>去支付</p>
+				</div>
+			</div>
+			<div class="shade" id="Index_shade"></div>
+		</header>
+		
+		<section>	
 			<div class="products">
 				<div class="products_left">
 					<img src="img/2-小圆馒头.png"/>
@@ -24,6 +41,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<!--以下是第二和第三个账单，可以删除.-->
 			<div class="products">
 				<div class="products_left">
@@ -120,21 +138,10 @@
 			</div>
 			<!-- 底部导航End -->
 			
-			
+		
 		</footer>
-		<!-- 以下是遮罩层和超额提示 -->
-			<div class="shade" id="shada"</div>
-			<div class="OverfullDebt" id="OverfullDebt">
-				<div class="OverfullDebt_top">
-					<p>温馨提示</p>
-				</div>
-				<div class="OverfullDebt_middle">
-					<p class="p1">您累计欠款已超额,</p>
-					<p class="p2">支付后才能完成本次订货哦!</p>
-				</div>
-				<div class="OverfullDebt_bottom">
-					<p>去支付</p>
-				</div>
-			</div>
+		
+
+			
 	</body>
 </html>
