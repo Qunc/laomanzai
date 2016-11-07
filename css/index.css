@@ -225,6 +225,7 @@ section .products{
 	 background: #fff;
 	 z-index: 51;
 	 border-radius: 4px;
+	 display: none;
 }
 .OverfullDebt_top{
 	width: 100%;
