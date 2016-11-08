@@ -332,6 +332,10 @@ section .products{
 	position: relative;
 	padding-left: 3.5rem;
 }
+.bill .bill_total{
+	font-size: 18px;
+	color:#333;
+}
 .bill p{
 	line-height:6.8rem;
 	font-size: 18px;
@@ -340,6 +344,9 @@ section .products{
 .bill p .total_size_hack{
 	color:#686868;
 	font-size:20px;
+}
+.bill p span{
+	color:#686868;
 }
 .bill button{
 	/*display: inline-block;*/
@@ -410,7 +417,7 @@ section .products{
 	position: absolute;
 	top:50%;
 	right:14px;
-	margin-top:-6px;
+	margin-top:-5px;
 	
 }
 .border_bottom{
@@ -446,6 +453,9 @@ section .details{
 	position: relative;
 	padding-left: 3.5rem;
 	padding-top: 0.5rem;
+}
+section .details .letter_hack{
+	
 }
 .details p{
 	line-height:3rem;
