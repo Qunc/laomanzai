@@ -56,7 +56,6 @@
                     <dl>
                         <dt>
                             <img src="./assets/img/cart_active.gif"/>
-                            <img src="./assets/img/cart.gif" style="display: none;"/>
                         </dt>
                         <dd><p>订购</p></dd>
                     </dl>
