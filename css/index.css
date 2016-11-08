@@ -16,15 +16,16 @@ section .products{
 	
 }
 .products .products_left{
-	width: 18%;
+	width: 28%;
 	height: 100%;
 	position: relative;
 	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+	padding-left: 2rem;
 	float: left;
+	box-sizing: border-box;
 }
 .products .products_left img{
-	width: 8rem;
+	width: 79.19%;
 	height: 7rem;
 	position: absolute;
 	top:50%;
@@ -32,13 +33,15 @@ section .products{
 	margin-top: -3.5rem;
 }
 .products .products_right{
-	width: 69%;
-	height: 7.1rem;
+	width: 72%;
+	height: 10rem;
 	float: left;
 	padding-top: 1.5rem;
 	padding-bottom: 1.4rem;
 	padding-right: 1.5rem;
 	position: relative;
+	box-sizing: border-box;
+	
 }
 .products .products_right p{
 	font-size: 15px;
