@@ -463,6 +463,7 @@ section .indent_bottom p:nth-last-of-type(1){
 	right: 20px;
 	font-size: 15px;
 	font-family: PingFang SC Heavy;
+	font-weight: bold;
 }
 .indent_bottom:nth-last-of-type(1) .border_bottom{
 	left: 0;
