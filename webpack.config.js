@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file',
         options: {
-          name: '[name].[ext]?[hash]'
+          name: 'assets/img/[name].[ext]?[hash]'
         }
       },
       { test: /\.css$/, loader: ExtractTextPlugin.extract({

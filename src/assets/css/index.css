@@ -73,12 +73,7 @@ section .products{
 .products .products_right .order_num{
 	position: absolute;
 	right: 1.2rem;
-<<<<<<< HEAD:src/assets/css/index.css
 	bottom: 0;
-=======
-	bottom: -1.2rem;
-	display: none;
->>>>>>> ccefecf35e42c3b066504921c430e348ff7aabc4:css/index.css
 }
 .products .products_right .order_num span{
 	font-size: 13px;
@@ -224,11 +219,6 @@ section .products{
 	background: #000;
 	opacity: 0.3;
 	z-index: 50;
-<<<<<<< HEAD:src/assets/css/index.css
-=======
-	display: none;
-
->>>>>>> ccefecf35e42c3b066504921c430e348ff7aabc4:css/index.css
 }
 .OverfullDebt{
 	 position:fixed;

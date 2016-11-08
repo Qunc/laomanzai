@@ -9,7 +9,7 @@
                 <p>下单时间：<span>{{order.created_at}}</span></p>
                 <p>配送日期：<span>{{order.delivery_date}}</span></p>
                 <p>总 金 额：<span>{{order.total_amount}}</span><span>元</span></p>
-                <p>订单状态：<span v-if="order.is_paied">已支付</span><span v-if="！order.is_paied">未支付</span></p>
+                <p>订单状态：<span v-if="order.is_paied">已支付</span><span v-if="!order.is_paied">未支付</span></p>
             </div>
 
             <div class="indent_bottom" v-for="item in order.items">
