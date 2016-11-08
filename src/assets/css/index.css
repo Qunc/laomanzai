@@ -69,7 +69,6 @@ section .products{
 	position: absolute;
 	right: 1.2rem;
 	bottom: 0;
-	display: none;
 }
 .products .products_right .order_num span{
 	font-size: 13px;
@@ -213,7 +212,6 @@ section .products{
 	background: #000;
 	opacity: 0.3;
 	z-index: 50;
-	display: none;
 }
 .OverfullDebt{
 	 position:fixed;
@@ -225,7 +223,6 @@ section .products{
 	 background: #fff;
 	 z-index: 51;
 	 border-radius: 4px;
-	 display: none;
 }
 .OverfullDebt_top{
 	width: 100%;
