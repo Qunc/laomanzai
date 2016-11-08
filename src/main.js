@@ -41,7 +41,7 @@ Vue.use(VueResource);
 Vue.http.headers.common['Content-Type'] = 'application/json';
 
 const router = new VueRouter({
-  mode: 'history',
+  //mode: 'history',
   base: __dirname,
   routes: [
     {path: '/', component: Index },
