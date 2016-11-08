@@ -5,26 +5,27 @@ html,body{
 	font-family: PingFang SC Medium;
 }
 body{
-	background: #ebebeb;	
+	background: #ebebeb;/*#fff;*/	
 }
 /* //////////首页///////////  */
 section .products{
 	width: 100%;
-	height: 10rem;
+	height: 11rem;
 	background: #fff;
 	border-bottom: 1px solid #ccc;
 	
 }
 .products .products_left{
-	width: 18%;
+	width: 28%;
 	height: 100%;
 	position: relative;
 	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+	padding-left: 2rem;
 	float: left;
+	box-sizing: border-box;
 }
 .products .products_left img{
-	width: 8rem;
+	width: 79.19%;
 	height: 7rem;
 	position: absolute;
 	top:50%;
@@ -32,28 +33,31 @@ section .products{
 	margin-top: -3.5rem;
 }
 .products .products_right{
-	width: 69%;
-	height: 7.1rem;
+	width: 72%;
+	height: 10.1rem;
 	float: left;
 	padding-top: 1.5rem;
 	padding-bottom: 1.4rem;
 	padding-right: 1.5rem;
 	position: relative;
+	box-sizing: border-box;
+	
 }
 .products .products_right p{
-	font-size: 15px;
+	font-size: 17px;
 	
 	
 }
 .products .products_right p.price{
 	font-size: 19px;
 	color: #ff461d;
-	margin-top: 3.6rem;
+	margin-top: 4.6rem;
 	font-family: PingFang SC Heavy;
+	font-weight: bold;
 }
 .products .products_right .order_button button{
 	position: absolute;		
-	bottom: 1rem;
+	bottom: -0.2rem;
 	right:1.1rem;
 	width: 10.7rem;
 	height: 3rem;
@@ -63,12 +67,18 @@ section .products{
 	background: #fff;
 	color:#ff5566;
 	font-size:14px;
+
 	
 }
 .products .products_right .order_num{
 	position: absolute;
 	right: 1.2rem;
+<<<<<<< HEAD:src/assets/css/index.css
 	bottom: 0;
+=======
+	bottom: -1.2rem;
+	display: none;
+>>>>>>> ccefecf35e42c3b066504921c430e348ff7aabc4:css/index.css
 }
 .products .products_right .order_num span{
 	font-size: 13px;
@@ -92,11 +102,13 @@ section .products{
 .footer_accounts{
 	/*flex: 1;*/
 	width: 97.33%;
+	height: 45px;
 	padding-left: 1rem;
 	position: absolute;
 	bottom: 50px;
 	background: #fff;
 	border-bottom: 1px solid #ccc;
+	box-shadow:0 -1px 3px #686868;
 }
 .footer_accounts .total{
 	font-size: 1.4rem;
@@ -124,7 +136,7 @@ section .products{
 	margin-right: 0px;
 	border: 1px solid #ff461d;
 	background: #ff461d;
-	height:43px;
+	height:45px;
 	margin-top: 0px;
 	border:0;
 	width: 12.8rem;
@@ -212,6 +224,11 @@ section .products{
 	background: #000;
 	opacity: 0.3;
 	z-index: 50;
+<<<<<<< HEAD:src/assets/css/index.css
+=======
+	display: none;
+
+>>>>>>> ccefecf35e42c3b066504921c430e348ff7aabc4:css/index.css
 }
 .OverfullDebt{
 	 position:fixed;
@@ -324,6 +341,11 @@ section .products{
 .bill p{
 	line-height:6.8rem;
 	font-size: 18px;
+	color:#333;
+}
+.bill p .total_size_hack{
+	color:#686868;
+	font-size:20px;
 }
 .bill button{
 	/*display: inline-block;*/
@@ -359,13 +381,12 @@ section .products{
 .indent_content .box_one{
 	padding-top: 1.2rem;
 }
-.indent_content .box_one .box_one_right{
+
+.indent_content .box_one .box_one_left,.indent_content .box_one .box_one_right{
 	color: #686868;
 }
-.indent_content:nth-last-of-type(1) .border_bottom{
-	left: 0;
-	width:100%;
-	
+.indent_content .box_one .num_size_hack{
+	font-size: 17px;
 }
 #Go_indent_details{
 
@@ -403,6 +424,11 @@ section .products{
 	bottom: 0;
 	width:85.33%;
 	border-bottom: 1px solid #ccc;
+}
+.indent_content:nth-last-of-type(1) .border_bottom{
+	left: 0;
+	width:100%;
+	
 }
 /* //////订单详情////// */
 header{
@@ -459,6 +485,7 @@ section .indent_bottom p:nth-last-of-type(1){
 	right: 20px;
 	font-size: 15px;
 	font-family: PingFang SC Heavy;
+	font-weight: bold;
 }
 .indent_bottom:nth-last-of-type(1) .border_bottom{
 	left: 0;
