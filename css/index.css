@@ -63,13 +63,13 @@ section .products{
 	background: #fff;
 	color:#ff5566;
 	font-size:14px;
-	
+	display: none;
 }
 .products .products_right .order_num{
 	position: absolute;
 	right: 1.2rem;
 	bottom: 0;
-	display: none;
+
 }
 .products .products_right .order_num span{
 	font-size: 13px;
