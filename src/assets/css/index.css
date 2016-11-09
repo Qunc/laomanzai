@@ -3,6 +3,7 @@ html,body{
 	font-size: 62.5%;
 	color:#333;
 	font-family: PingFang SC Medium;
+	overflow-x: hidden;
 }
 body{
 	background: #ebebeb;/*#fff;*/	
@@ -153,6 +154,7 @@ section .products{
 	position: fixed;
 	bottom: 0;
 	border-top:1px solid #ccc;
+	overflow: hidden;
 }
 .index_bottom .cut-off{
 	width:1px;
@@ -338,7 +340,7 @@ section .products{
 	border-bottom:1px solid #ccc;
 	margin-top:1.3rem;
 	position: relative;
-	padding-left: 3.5rem;
+	padding-left: 9.33%;
 }
 .bill .bill_total{
 	font-size: 18px;
@@ -385,7 +387,7 @@ section .products{
 	position: relative;
 	width: 90.67%;
 	height: 7rem;
-	padding-left: 3.5rem;
+	padding-left: 9.33%;
 	font-size:15px;
 	background: #f9f9f9;
 }
