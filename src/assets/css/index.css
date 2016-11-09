@@ -6,6 +6,7 @@ html,body{
 }
 body{
 	background: #ebebeb;/*#fff;*/	
+	position: relative;
 }
 /* //////////首页///////////  */
 section .products{
@@ -73,8 +74,7 @@ section .products{
 .products .products_right .order_num{
 	position: absolute;
 	right: 1.2rem;
-	bottom: -1.2rem;
-	display: none;
+	bottom: 0;
 }
 .products .products_right .order_num span{
 	font-size: 13px;
@@ -100,8 +100,8 @@ section .products{
 	width: 97.33%;
 	height: 45px;
 	padding-left: 1rem;
-	position: absolute;
-	bottom: 50px;
+	position: fixed;
+	bottom: 49px;
 	background: #fff;
 	border-bottom: 1px solid #ccc;
 	box-shadow:0 -1px 3px #686868;
@@ -126,7 +126,7 @@ section .products{
 	color:#ff461d;
 }
 .accounts{
-	position: absolute;
+	position: fixed;
 	right:0;
 	bottom: 51px;
 	margin-right: 0px;
@@ -148,7 +148,7 @@ section .products{
 	width: 100%;
 	height: 49px;
 	background: #f9f9f9;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 }
 .index_bottom .cut-off{
@@ -187,6 +187,10 @@ section .products{
 	font-size: 12px;
 	
 }
+.index_bottom_left dl dd p a{
+	text-decoration: none;
+	color: #b9b9b9;
+}
 .index_bottom_right{
 	position: relative;
 	float: left;
@@ -212,6 +216,10 @@ section .products{
 	color: #b9b9b9;
 	font-size: 12px;
 }
+.index_bottom_right dl dd p a{
+	text-decoration: none;
+	color: #b9b9b9;
+}
 /* ///////首页的遮罩和超额提示/////// */
 .shade{
 	position: fixed;
@@ -220,8 +228,6 @@ section .products{
 	background: #000;
 	opacity: 0.3;
 	z-index: 50;
-	display: none;
-
 }
 .OverfullDebt{
 	 position:fixed;
@@ -233,7 +239,6 @@ section .products{
 	 background: #fff;
 	 z-index: 51;
 	 border-radius: 4px;
-	 display: none;
 }
 .OverfullDebt_top{
 	width: 100%;
