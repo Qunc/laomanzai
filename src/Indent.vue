@@ -1,4 +1,5 @@
 <template>
+	
     <div>
         <header class="header_title">
             <!-- 超额提示和遮罩层 -->
@@ -15,12 +16,12 @@
         <section>
             <div v-for="item in billings">
                 <div class="bill">
-                    <p>总 金 额：<span>{{item.total_amount}}元</span></p><button v-if="!item.is_paied">立即支付</button>
+                    <p>总 金 额：<span>{{item.total_amount}}</span>元</p><button v-if="!item.is_paied">立即支付</button>
                 </div>
 
                 <div class="indent_content" v-for="order in item.order_list">
-                    <div class="box_one"><span class="box_one_left">配送日期：</span><span class="box_one_right">{{order.delivery_date}}</span></div>
-                    <div class="box_one"><span class="box_one_left">总 &nbsp;金 &nbsp;额：</span><span class="box_one_right">{{order.total_amount}}</span><span class="box_one_right">元</span></div>
+                    <div class="box_one"><span class="box_one_left">配送日期：</span><span class="box_one_right num_size_hack">{{order.delivery_date}}</span></div>
+                    <div class="box_one"><span class="box_one_left">总 &nbsp;金 &nbsp;额：</span><span class="box_one_right num_size_hack">{{order.total_amount}}</span><span class="box_one_right">元</span></div>
                     <div id="Go_indent_details">
                         <router-link :to="{name:'detail', params:{id:order.order_id}}">
                             <div class="indent_right" v-if="!order.is_paied">未支付</div>
@@ -53,23 +54,27 @@
         <footer>
             <!-- 以下是底部导航 -->
             <div class="index_bottom">
+            	
                 <div class="index_bottom_left">
                     <dl>
-                        <dt>
-                            <img src="./assets/img/cart_active.gif"/>
-                            <img src="./assets/img/cart.gif" style="display: none;"/>
-                        </dt>
-                        <dd><p><router-link to="/">订购</router-link></p></dd>
+                    	<router-link to="/">
+	                        <dt>
+	                            <img src="./assets/img/cart_active.gif" style="display: none;"/>
+	                            <img src="./assets/img/cart.gif"/>
+	                        </dt>
+	                        <dd><p>订购</p></dd>
+	                    </router-link>
                     </dl>
                 </div>
+            	
                 <div class="cut-off"></div>
                 <div class="index_bottom_right">
                     <dl>
                         <dt>
-                            <img src="./assets/img/bill.gif"/>
-                            <img src="./assets/img/bill_active.gif" style="display: none;"/>
+                            <img src="./assets/img/bill.gif" style="display: none;"/>
+                            <img src="./assets/img/bill_active.gif"/>
                         </dt>
-                        <dd><p>账单</p></dd>
+                        <dd><p style="color:#52BE44;">账单</p></dd>
                     </dl>
                 </div>
             </div>

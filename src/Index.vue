@@ -58,16 +58,18 @@
                             <img src="./assets/img/cart_active.gif"/>
                             <img src="./assets/img/cart.gif" style="display: none;"/>
                         </dt>
-                        <dd><p>订购</p></dd>
+                        <dd><p style="color:#52BE44;">订购</p></dd>
                     </dl>
                 </div>
                 <div class="cut-off"></div>
                 <div class="index_bottom_right">
                     <dl>
-                        <dt>
-                            <img src="./assets/img/bill.gif"/>
-                        </dt>
-                        <dd><p><router-link to="/indent">账单</router-link></p></dd>
+                    	<router-link to="/indent">
+	                        <dt>
+	                            <img src="./assets/img/bill.gif"/>
+	                        </dt>
+	                        <dd><p>账单</p></dd>
+                    	</router-link>
                     </dl>
                 </div>
             </div>
@@ -96,7 +98,8 @@ module.exports = {
             for (i in this.product_list) {
                 var item = this.product_list[i];
                 if (item.last_buy_quantity) {
-                    cost += item.last_buy_quantity * item.price;
+                	var single = (item.last_buy_quantity * item.price * 100 )/100;
+                    cost =  (cost * 100 + single *100 )/100;
                 }
             }
             return cost;

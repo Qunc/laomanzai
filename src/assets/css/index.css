@@ -53,7 +53,7 @@ section .products{
 	font-size: 19px;
 	color: #ff461d;
 	margin-top: 4.6rem;
-	font-family: PingFang SC Heavy;
+	font-family: arial;
 	font-weight: bold;
 }
 .products .products_right .order_button button{
@@ -74,7 +74,7 @@ section .products{
 .products .products_right .order_num{
 	position: absolute;
 	right: 1.2rem;
-	bottom: 0;
+	bottom: -1rem;
 }
 .products .products_right .order_num span{
 	font-size: 13px;
@@ -117,13 +117,16 @@ section .products{
 	line-height: 4.3rem;
 	color:#ff461d;
 	font-family: arial;
-	
+	font-weight: bold;
 }
 .footer_accounts i{
-	font-size: 1.4rem;
+	font-size: 16px;
 	line-height: 4rem;
-	font-family: PingFang SC Regular;
+	font-family: arial;
+	font-weight: bold;
+	font-style: normal;
 	color:#ff461d;
+	
 }
 .accounts{
 	position: fixed;
@@ -183,7 +186,7 @@ section .products{
 	top: 50%;
 	margin-left: -10px;
 	margin-top: 8px;
-	color: #52be44;
+	color: #b9b9b9;
 	font-size: 12px;
 	
 }
@@ -352,6 +355,8 @@ section .products{
 }
 .bill p span{
 	color:#686868;
+	font-family: arial;
+	font-size: 20px;
 }
 .bill button{
 	/*display: inline-block;*/
@@ -393,6 +398,7 @@ section .products{
 }
 .indent_content .box_one .num_size_hack{
 	font-size: 17px;
+	font-family: arial;
 }
 #Go_indent_details{
 
@@ -466,6 +472,10 @@ section .details .letter_hack{
 	line-height:3rem;
 	font-size: 15px;
 }
+.details p .num_size_hack{
+	font-size: 17px;
+	font-family: arial;
+}
 .details span{
 	color: #686868;
 }
@@ -476,7 +486,6 @@ section .details .letter_hack{
 	color: #686868;
 	background: #f9f9f9;
 	position: relative;
-	font-size: 14px;
 	
 	
 }
@@ -492,8 +501,8 @@ section .indent_bottom p:nth-last-of-type(1){
 	font-weight: 550;
 	position: absolute;
 	right: 20px;
-	font-size: 15px;
-	font-family: PingFang SC Heavy;
+	font-size: 17px;
+	font-family: arial;
 	font-weight: bold;
 }
 .indent_bottom:nth-last-of-type(1) .border_bottom{
