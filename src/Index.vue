@@ -103,7 +103,7 @@ module.exports = {
     },
     methods: {
         fetchData: function () {
-            this.$http.get('http://api-test.shangcars.com/factory/products?token='+localStorage.token).then(function (res) {
+            this.$http.get(localStorage.getItem('base_url') + '/factory/products?token='+localStorage.token).then(function (res) {
                 if (res.body.err_code == 0) {
                     var list = res.body.product_list;
                     for (var i=0; i < list.length; i++) {
@@ -132,7 +132,7 @@ module.exports = {
                 }
             }
 
-            this.$http.post('http://api-test.shangcars.com/order?token=' +localStorage.token, {buy_items: buy_items}).then(function (res) {
+            this.$http.post(localStorage.getItem('base_url') + '/order?token=' +localStorage.token, {buy_items: buy_items}).then(function (res) {
                 if (res.body.err_code == 2001) {
                     this.exceed = true;
                 } else {

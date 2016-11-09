@@ -100,7 +100,7 @@ module.exports = {
     },
     methods: {
         fetchData: function () {
-            this.$http.get('http://api-test.shangcars.com/billings?token='+localStorage.token).then(function (res) {
+            this.$http.get(localStorage.getItem('base_url') + '/billings?token='+localStorage.token).then(function (res) {
                 if (res.body.err_code == 0) {
                     this.billings = res.body.billings;
                 }

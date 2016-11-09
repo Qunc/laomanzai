@@ -39,6 +39,7 @@ if (token) {
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.http.headers.common['Content-Type'] = 'application/json';
+localStorage.setItem('base_url', 'http://api.shangcars.com');
 
 const router = new VueRouter({
   //mode: 'history',
