@@ -57,12 +57,12 @@
             	
                 <div class="index_bottom_left">
                     <dl>
-
-                        <dt>
-                            <img src="./assets/img/cart.gif"/>
-                        </dt>
-                        <dd><p><router-link to="/">订购</router-link></p></dd>
-
+						<router-link to="/">
+	                        <dt>
+	                            <img src="./assets/img/cart.gif"/>
+	                        </dt>
+	                        <dd><p>订购</p></dd>
+						</router-link>
                     </dl>
                 </div>
             	
