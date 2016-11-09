@@ -130,7 +130,7 @@ section .products{
 .accounts{
 	position: fixed;
 	right:0;
-	bottom: 51px;
+	bottom: 50px;
 	margin-right: 0px;
 	border: 1px solid #ff461d;
 	background: #ff461d;
