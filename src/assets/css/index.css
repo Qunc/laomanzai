@@ -375,6 +375,11 @@ section .products{
 	color:#fff;
 	font-size:14px;
 }
+.bill button a{
+	color: #fff;
+	text-decoration: none;
+	font-family: PingFang SC Medium;
+}
 .indent{
 	width:100%;
 	height:7rem;

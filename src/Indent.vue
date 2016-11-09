@@ -16,7 +16,7 @@
         <section style="margin-bottom: 49px;">
             <div v-for="item in billings">
                 <div class="bill">
-                    <p>总 金 额：<span>{{item.total_amount}}</span>元</p><button v-if="!item.is_paied">立即支付</button>
+                    <p>总 金 额：<span>{{item.total_amount}}元</span></p><button v-if="!item.is_paied"><a href="/billings/pay">立即支付</a></button>
                 </div>
 
                 <div class="indent_content" v-for="order in item.order_list">
@@ -57,13 +57,12 @@
             	
                 <div class="index_bottom_left">
                     <dl>
-                    	<router-link to="/">
-	                        <dt>
-	                            <img src="./assets/img/cart_active.gif" style="display: none;"/>
-	                            <img src="./assets/img/cart.gif"/>
-	                        </dt>
-	                        <dd><p>订购</p></dd>
-	                    </router-link>
+
+                        <dt>
+                            <img src="./assets/img/cart.gif"/>
+                        </dt>
+                        <dd><p><router-link to="/">订购</router-link></p></dd>
+
                     </dl>
                 </div>
             	
@@ -71,7 +70,6 @@
                 <div class="index_bottom_right">
                     <dl>
                         <dt>
-                            <img src="./assets/img/bill.gif" style="display: none;"/>
                             <img src="./assets/img/bill_active.gif"/>
                         </dt>
                         <dd><p style="color:#52BE44;">账单</p></dd>

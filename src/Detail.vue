@@ -1,7 +1,9 @@
 <template>
     <div>
         <header class="header_title">
+
             <img src="./assets/img/left.png" v-on:click="detail_back" /><span>订单详情</span>
+
         </header>
         <section>
             <div class="details">
@@ -50,7 +52,6 @@ module.exports = {
     },
     created: function () {
         this.fetchData();
-
     },
     methods: {
         fetchData: function (){
