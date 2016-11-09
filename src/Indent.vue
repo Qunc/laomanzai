@@ -13,7 +13,7 @@
             <span>我的账单</span>
         </header>
 
-        <section>
+        <section style="margin-bottom: 49px;">
             <div v-for="item in billings">
                 <div class="bill">
                     <p>总 金 额：<span>{{item.total_amount}}</span>元</p><button v-if="!item.is_paied">立即支付</button>

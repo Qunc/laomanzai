@@ -17,7 +17,7 @@
             <div v-if="exceed" class="shade" id="Index_shade"></div>
         </header>
 
-        <section>
+        <section style="margin-bottom: 95px;">
             <div class="products" v-for="(item, index) in product_list">
                 <div class="products_left">
                     <img :src="item.main_img"/>
@@ -36,9 +36,6 @@
             </div>
 
             <!-- 以下是一键订货 -->
-            <div style="position: absolute;bottom: 91px;color:#fff;">
-                <img src="./assets/img/index_bottom.png" style="width:100%;height:3px;"/>
-            </div>
             <div class="footer_accounts">
                 <span class="total">合计：</span>
                 <i> &yen</i>

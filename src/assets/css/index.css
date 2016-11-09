@@ -103,7 +103,6 @@ section .products{
 	position: fixed;
 	bottom: 49px;
 	background: #fff;
-	border-bottom: 1px solid #ccc;
 	box-shadow:0 -1px 3px #686868;
 }
 .footer_accounts .total{
@@ -153,6 +152,7 @@ section .products{
 	background: #f9f9f9;
 	position: fixed;
 	bottom: 0;
+	border-top:1px solid #ccc;
 }
 .index_bottom .cut-off{
 	width:1px;
