@@ -96,7 +96,7 @@ module.exports = {
                     node.style.display = 'none';
                 }
             }
-        }, 1500)
+        }, 3000)
     },
     methods: {
         fetchData: function () {
