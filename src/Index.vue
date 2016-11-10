@@ -29,7 +29,7 @@
                         <button v-on:click="edit_item(index)">点击订货</button>
                     </div>
                     <div v-show="parseInt(item.last_buy_quantity) || item.edit" class="order_num">
-                        <span>订货量：<input v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false"/></span>
+                        <span>订货量：<input  v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false" class="quantity-input"/></span>
                         <span>{{item.unit}}</span>
                     </div>
                 </div>
@@ -123,15 +123,18 @@ module.exports = {
         },
         edit_item: function (index) {
             this.product_list[index].edit = true;
-            if (!this.product_list[index].last_buy_quantity) {
-                //this.product_list[index].last_buy_quantity = '';
+            var list = document.getElementsByClassName('quantity-input');
+
+            if (list[index]) {
+                console.log(list[index])
+                list[index].focus();
             }
         },
         submit_order: function () {
             var buy_items = [];
             for (i in this.product_list) {
                 var item = this.product_list[i];
-                if (item.last_buy_quantity) {
+                if (item.last_buy_quantity > 0) {
                     //cost += item.last_buy_quantity * item.price;
                     buy_items.push({
                         product_id: item.product_id,
