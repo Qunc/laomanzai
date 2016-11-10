@@ -3,11 +3,11 @@
     <div>
         <header class="header_title">
             <!-- 超额提示和遮罩层 -->
-            <div  v-if="$route.params.order" class="OverfullDebt success-tips" id="Indent_OverfullDebt">
+            <div  v-if="$route.params.order_success_tips" class="OverfullDebt success-tips" id="Indent_OverfullDebt">
                 <img src="./assets/img/Order_success.gif"/>
                 <p class="Order_Success_Text">订货成功</p>
             </div>
-            <div  v-if="$route.params.order" class="shade success-tips" id="Indent_shade"></div>
+            <div  v-if="$route.params.order_success_tips" class="shade success-tips" id="Indent_shade"></div>
             <!-- 超额提示和遮罩层 End-->
 
             <span>我的账单</span>

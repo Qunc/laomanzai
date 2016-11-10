@@ -76,16 +76,24 @@
 
 <script>
 module.exports = {
+    beforeRouteLeave: function (to, from ,next) {
+        //下单成功的话，通知下一个路由，做成功提示
+        to.params.order_success_tips = this.order_success;
+        next();
+    },
     data: function () {
         return {
             loading: true,
             product_list: [],
-            exceed: false //超额
+            exceed: false, //超额
+            order_success: false //订单成功标志
         }
     },
     created: function () {
         this.fetchData();
         this.exceed = false;
+        //重置订单成功标志
+        this.order_success = false;
     },
     computed: {
         //合计金额
@@ -136,7 +144,8 @@ module.exports = {
                 if (res.body.err_code == 2001) {
                     this.exceed = true;
                 } else {
-                    this.$router.push('/indent/1')
+                    this.order_success = true;
+                    this.$router.push('/indent')
                 }
             })
         }
