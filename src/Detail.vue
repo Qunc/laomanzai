@@ -65,7 +65,7 @@
 
 
         </section>
-        <footer v-if="!order.can_edit">
+        <footer v-if="order.can_edit">
 			<div class="bottom_edit_confirm_box">
 				<div class="bottom_edit_confirm" v-on:click="submit_edit"><p>确认修改</p></div>
 			</div>
