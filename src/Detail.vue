@@ -35,12 +35,19 @@
 
             <div class="indent_bottom" v-for="(item, index) in order.items">
                 <p>{{item.name}}<span class="indent_bottom_right indent_bottom_right_price">&yen;：{{item.price*100*item.quantity/100}}</span></p>
-                <p><span>单位：{{item.unit}}</span>
-					<span class="indent_bottom_right edit_num_box">
+                <p> <span>单位：{{item.unit}}</span>
+					<span v-if="order.can_edit" class="indent_bottom_right edit_num_box">
 						<div class="min" v-on:click="detail_min(index)"><img src="../img/jian.gif"/></div>
 						<div class="edit_num"><input class="input_number" type="number" v-model="item.quantity" /></div>
 						<div class="add" v-on:click="detail_add(index)"><img src="../img/jia.gif"/></div>	
 					</span>
+					
+						
+						
+					<span v-if="!order.can_edit" class="indent_bottom_right indent_bottom_right_price" style="top:4.8rem;">×{{item.quantity}}</span>
+						
+						
+					
                 </p>
                 <div class="border_bottom"></div>
             </div>
@@ -58,7 +65,7 @@
 
 
         </section>
-        <footer>
+        <footer v-if="!order.can_edit">
 			<div class="bottom_edit_confirm_box">
 				<div class="bottom_edit_confirm" v-on:click="submit_edit"><p>确认修改</p></div>
 			</div>
