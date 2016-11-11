@@ -31,9 +31,7 @@
                         <button v-on:click="edit_item(index)">点击订货</button>
                     </div>
                     <div v-show="parseInt(item.last_buy_quantity) || item.edit" class="order_num">
-
-                        <span>订货量：<input type="number" v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false"/></span>
-
+                        <span>订货量：<input type="number" v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false" class="quantity-input"/></span>
                         <span>{{item.unit}}</span>
                     </div>
                 </div>
@@ -115,7 +113,7 @@ module.exports = {
     },
     methods: {
         fetchData: function () {
-            this.$http.get(localStorage.getItem('base_url') + '/factory/products?token='+localStorage.token).then(function (res) {
+            this.$http.get(API_BASE_URL + '/factory/products?token='+localStorage.token).then(function (res) {
                 if (res.body.err_code == 0) {
                     var list = res.body.product_list;
                     for (var i=0; i < list.length; i++) {
@@ -147,7 +145,7 @@ module.exports = {
                 }
             }
 
-            this.$http.post(localStorage.getItem('base_url') + '/order?token=' +localStorage.token, {buy_items: buy_items}).then(function (res) {
+            this.$http.post(API_BASE_URL + '/order?token=' +localStorage.token, {buy_items: buy_items}).then(function (res) {
                 if (res.body.err_code == 2001) {
                     this.exceed = true;
                 } else {

@@ -101,7 +101,7 @@ module.exports = {
     },
     methods: {
         fetchData: function () {
-            this.$http.get(localStorage.getItem('base_url') + '/billings?token='+localStorage.token).then(function (res) {
+            this.$http.get(API_BASE_URL + '/billings?token='+localStorage.token).then(function (res) {
                 if (res.body.err_code == 0) {
                     this.billings = res.body.billings;
                 }

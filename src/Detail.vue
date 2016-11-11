@@ -68,7 +68,7 @@ module.exports = {
     },
     methods: {
         fetchData: function (){
-            this.$http.get(localStorage.getItem('base_url') + '/order/'+this.$route.params.id+'?token='+localStorage.token).then(function (res) {
+            this.$http.get(API_BASE_URL + '/order/'+this.$route.params.id+'?token='+localStorage.token).then(function (res) {
                 if (res.body.err_code == 0) {
                     this.order = res.body;
                 }
