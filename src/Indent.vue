@@ -2,18 +2,18 @@
 	
     <div>
         <header class="header_title">
-            <!-- 超额提示和遮罩层 -->
+            <!-- 订货成功提示和遮罩层 -->
             <div  v-if="$route.params.order_success_tips" class="OverfullDebt success-tips" id="Indent_OverfullDebt">
                 <img src="./assets/img/Order_success.gif"/>
                 <p class="Order_Success_Text">订货成功</p>
             </div>
             <div  v-if="$route.params.order_success_tips" class="shade success-tips" id="Indent_shade"></div>
-            <!-- 超额提示和遮罩层 End-->
+            <!-- 订货成功提示和遮罩层 End-->
 
             <span>我的账单</span>
         </header>
 
-        <section style="margin-bottom: 49px;">
+        <section style="margin-bottom: 50px;">
             <div v-for="item in billings">
                 <div class="bill">
                     <p>需支付总金额：<span class="bill_number">{{item.total_amount}}</span><span>元</span></p><button v-if="!item.is_paied"><a href="/billings/pay">立即支付</a></button>
@@ -25,8 +25,8 @@
                     <div class="box_one"><span class="box_one_left">订货金额：</span><span class="box_one_right num_size_hack">{{order.total_amount}}</span><span class="box_one_right">元</span></div>
                     <div id="Go_indent_details">
                         <router-link :to="{name:'detail', params:{id:order.order_id}}">
-                            <div class="indent_right" v-if="!order.is_paied">修改</div>
-                            <div class="indent_right" v-if="order.is_paied">查看</div>
+                            <div class="indent_right" v-if="!order.can_edit">查看</div>
+                            <div class="indent_right" v-if="order.can_edit">修改</div>
                             <img src="./assets/img/skip.png" class="right_button"/>
                         </router-link>
                     </div>
