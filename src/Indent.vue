@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="indent_content" v-for="order in item.order_list">
-                	<div class="box_one"><span class="box_one_left">订货时间：</span><span class="box_one_right num_size_hack">{{order.delivery_date}}</span></div>
+                	<div class="box_one"><span class="box_one_left">订货时间：</span><span class="box_one_right num_size_hack">{{order.created_at}}</span></div>
                     <div class="box_one"><span class="box_one_left">配送日期：</span><span class="box_one_right num_size_hack">{{order.delivery_date}}</span></div>
                     <div class="box_one"><span class="box_one_left">订货金额：</span><span class="box_one_right num_size_hack">{{order.total_amount}}</span><span class="box_one_right">元</span></div>
                     <div id="Go_indent_details">
