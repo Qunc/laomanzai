@@ -6,19 +6,32 @@
 
         </header>
         <section>
+        	<div class="Detail_Tips">
+        		<div class="Detail_Tips_left">如需新增商品，请执行：</div>
+        		<div class="Detail_Tips_right">
+        			<ol>
+        				<li>回到订购页</li>
+        				<li>清零商品数量</li>
+        				<li>输入所需要的商品数量，“一键订货”</li>
+        			</ol>
+        		</div>
+        		
+        	</div>
             <div class="details">
                 <p>订单编号：<span class="num_size_hack">{{order.order_id}}</span></p>
-                <p>下单时间：<span class="num_size_hack">{{order.created_at}}</span></p>
+                <p>订货时间：<span class="num_size_hack">{{order.created_at}}</span></p>
                 <p>配送日期：<span class="num_size_hack">{{order.delivery_date}}</span></p>
                 <p>总 金 额：<span class="num_size_hack">{{order.total_amount}}</span><span>元</span></p>
                 <p>订单状态：<span v-if="order.is_paied">已支付</span><span v-if="!order.is_paied">未支付</span></p>
             </div>
 
             <div class="indent_bottom" v-for="item in order.items">
-                <p>{{item.name}}<span class="indent_bottom_right">×{{item.quantity}}</span></p>
+                <p>{{item.name}}<span class="indent_bottom_right indent_bottom_right_price">&yen;：{{item.price*100*item.quantity/100}}</span></p>
                 <p><span>单位：{{item.unit}}</span>
-                    <span class="indent_bottom_right">
-							  		<span>&yen;：</span><span>{{item.price*100*item.quantity/100}}</span>
+					<span class="indent_bottom_right edit_num_box">
+						<div class="min"><img src="../img/jian.gif"/></div>
+						<div class="edit_num"><input class="input_number" type="number" v-model="item.quantity" /></div>
+						<div class="add"><img src="../img/jia.gif"/></div>	
 					</span>
                 </p>
                 <div class="border_bottom"></div>

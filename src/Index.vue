@@ -15,6 +15,8 @@
                 </div>
             </div>
             <div v-if="exceed" class="shade" id="Index_shade"></div>
+            <!-- 超额提示和遮罩层End -->
+            <div class="tips"><span>温馨提示：</span>以下的订货量为上笔订货单的数量，如无需更改，请直接点击“一键订货”。</div>
         </header>
 
         <section style="margin-bottom: 95px;">
@@ -29,7 +31,9 @@
                         <button v-on:click="edit_item(index)">点击订货</button>
                     </div>
                     <div v-show="parseInt(item.last_buy_quantity) || item.edit" class="order_num">
-                        <span>订货量：<input v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false"/></span>
+
+                        <span>订货量：<input type="number" v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false"/></span>
+
                         <span>{{item.unit}}</span>
                     </div>
                 </div>
@@ -76,16 +80,24 @@
 
 <script>
 module.exports = {
+    beforeRouteLeave: function (to, from ,next) {
+        //下单成功的话，通知下一个路由，做成功提示
+        to.params.order_success_tips = this.order_success;
+        next();
+    },
     data: function () {
         return {
             loading: true,
             product_list: [],
-            exceed: false //超额
+            exceed: false, //超额
+            order_success: false //订单成功标志
         }
     },
     created: function () {
         this.fetchData();
         this.exceed = false;
+        //重置订单成功标志
+        this.order_success = false;
     },
     computed: {
         //合计金额
@@ -115,15 +127,18 @@ module.exports = {
         },
         edit_item: function (index) {
             this.product_list[index].edit = true;
-            if (!this.product_list[index].last_buy_quantity) {
-                //this.product_list[index].last_buy_quantity = '';
+            var list = document.getElementsByClassName('quantity-input');
+
+            if (list[index]) {
+                console.log(list[index])
+                list[index].focus();
             }
         },
         submit_order: function () {
             var buy_items = [];
             for (i in this.product_list) {
                 var item = this.product_list[i];
-                if (item.last_buy_quantity) {
+                if (item.last_buy_quantity > 0) {
                     //cost += item.last_buy_quantity * item.price;
                     buy_items.push({
                         product_id: item.product_id,
@@ -136,7 +151,8 @@ module.exports = {
                 if (res.body.err_code == 2001) {
                     this.exceed = true;
                 } else {
-                    this.$router.push('/indent/1')
+                    this.order_success = true;
+                    this.$router.push('/indent')
                 }
             })
         }

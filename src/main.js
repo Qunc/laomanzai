@@ -39,7 +39,7 @@ if (token) {
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.http.headers.common['Content-Type'] = 'application/json';
-localStorage.setItem('base_url', 'http://api.shangcars.com');
+localStorage.setItem('base_url', 'http://api-test.shangcars.com');
 
 const router = new VueRouter({
   //mode: 'history',
@@ -47,14 +47,14 @@ const router = new VueRouter({
   routes: [
     {path: '/', component: Index },
     {path: '/indent', component: Indent },
-    {path: '/indent/:order', component: Indent },
     {name:'detail', path: '/detail/:id', component: Detail}
   ]
 });
 
 
 new Vue({
-  router: router
+  router: router,
+  props: ['order_success']
 }).$mount('#app');
 
 
