@@ -619,6 +619,7 @@ section .indent_bottom p:nth-last-of-type(1){
 	border:0;
 	font-size: 18px;
 	font-family: arial;
+	outline:none;
 }
 .indent_bottom .indent_bottom_right div{
 	float: left;
