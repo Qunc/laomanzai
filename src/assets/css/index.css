@@ -1,4 +1,4 @@
-body,html,p,ul,ol{margin:0;padding: 0;}
+body,html,p,ul,ol,dl{margin:0;padding: 0;}
 html,body{
 	font-size: 62.5%;
 	color:#333;
@@ -163,6 +163,7 @@ section .products{
 	font-size: 1.6rem !important;
 	color: #fff;
 	font-family: PingFang SC Regular;
+	outline:none;
 	
 }
 #OneKeyOrder{
@@ -192,6 +193,19 @@ section .products{
 	width: 50%;
 	height: 100%;
 	
+}
+.index_bottom_left .box_left,.index_bottom_right .box_right{
+	width: 30%;
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+	
+-webkit-user-select: none; /* Chrome all / Safari all */
+-moz-user-select: none; /* Firefox all */
+-ms-user-select: none; /* IE 10+ */ /* No support for these yet, use at own risk */
+-o-user-select: none;
+user-select: none; 
+
 }
 .index_bottom_left dl dt img{
 	width: 22px;
@@ -308,6 +322,18 @@ section .products{
 	font-weight: bold;
 	border-radius: 4px;
 }
+/*.OverfullDebt_bottom .cancel{
+	box-sizing: border-box;
+	border-right:1px solid #ccc;
+}
+.OverfullDebt_bottom .cancel a{
+	color:#a1a1a1;
+}
+.OverfullDebt_bottom p{
+	width: 50%;
+	float: left;
+	
+}*/
 .OverfullDebt_bottom p a{
 	color: #52be44;
 	line-height: 4.8rem;
@@ -315,7 +341,7 @@ section .products{
 	text-decoration: none;
 	
 }
-
+/* ////首页的遮罩和提示End//// */
 
 /* ///我的账单页面/// */
 
@@ -435,15 +461,16 @@ section .products{
 }
 #Go_indent_details{
 
-	width: 85px;
-	height: 30px;
+	width: 60px;
+	height: 25px;
 	position: absolute;
 	right:0;
-	top:25.81%;
+	top:50%;
+	margin-top: -12.5px;
 }
 #Go_indent_details a{
 	color: #333;
-	display: flex;
+	display: block;
 	width: 100%;
 	height: 100%;
 }
@@ -451,16 +478,17 @@ section .products{
 	
 	position: absolute;
 	top:50%;
+	margin-top: -0.85rem;
 	right:30px;
-	font-size: 15px;
+	font-size: 1.5rem;
 }
 .indent_content .right_button{
 	width: 10px;
 	height: 12px;
 	position: absolute;
 	top:50%;
+	margin-top: -0.6rem;
 	right:14px;
-	margin-top:2px;
 	
 }
 .border_bottom{
@@ -492,17 +520,18 @@ section .Detail_Tips{
 	font-size: 11px;
 }
 .Detail_Tips .Detail_Tips_left{
-	width: 36.53%;
+	width: /*36.53*/40%;
 	height: 5.7rem;
 	padding-top: 0.75rem;
-	padding-left: 1.1rem;
+	padding-left: 1%;
+	padding-right:1%;
 	float: left;
 	box-sizing: border-box;
 	font-family: PingFang SC Bold;
 	font-weight: bold;;
 }
 .Detail_Tips .Detail_Tips_right{
-	width: 63.47%;
+	width: /*63.47*/60%;
 	height: 5.7rem;
 	padding-top: 0.75rem;
 	float: left;

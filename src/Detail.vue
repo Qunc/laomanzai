@@ -15,12 +15,12 @@
         </header>
         <section style="margin-bottom: 50px;">
         	<div class="Detail_Tips">
-        		<div class="Detail_Tips_left">如需新增商品，请执行：</div>
+        		<div class="Detail_Tips_left">如需新增商品，请执行:</div>
         		<div class="Detail_Tips_right">
         			<ol>
         				<li>回到订购页</li>
         				<li>清零商品数量</li>
-        				<li>输入所需要的商品数量，“一键订货”</li>
+        				<li>输入所需要的商品数量,“一键订货”</li>
         			</ol>
         		</div>
         		
@@ -66,8 +66,8 @@
 
         </section>
         <footer v-if="order.can_edit">
-			<div class="bottom_edit_confirm_box">
-				<div class="bottom_edit_confirm" v-on:click="submit_edit"><p>确认修改</p></div>
+			<div class="bottom_edit_confirm_box" v-on:click="submit_edit">
+				<div class="bottom_edit_confirm"><p>确认修改</p></div>
 			</div>
         </footer>
     </div>

@@ -55,26 +55,28 @@
         <footer>
             <!-- 以下是底部导航 -->
             <div class="index_bottom">
-            	
                 <div class="index_bottom_left">
-                    <dl>
-						<router-link to="/">
-	                        <dt>
-	                            <img src="./assets/img/cart.gif"/>
-	                        </dt>
-	                        <dd><p>订购</p></dd>
-						</router-link>
-                    </dl>
+                	<router-link to="/" class="box_left">
+	                    <dl>
+		                        <dt>
+		                            <img src="./assets/img/cart.gif"/>
+		                        </dt>
+		                        <dd><p>订购</p></dd>
+							
+	                    </dl>
+                    </router-link>
                 </div>
             	
                 <div class="cut-off"></div>
                 <div class="index_bottom_right">
-                    <dl>
-                        <dt>
-                            <img src="./assets/img/bill_active.gif"/>
-                        </dt>
-                        <dd><p style="color:#52BE44;">账单</p></dd>
-                    </dl>
+                	<div class="box_right">
+	                    <dl>
+	                        <dt>
+	                            <img src="./assets/img/bill_active.gif"/>
+	                        </dt>
+	                        <dd><p style="color:#52BE44;">账单</p></dd>
+	                    </dl>
+                    </div>
                 </div>
             </div>
         </footer>

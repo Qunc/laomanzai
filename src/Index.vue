@@ -11,7 +11,7 @@
                     <p class="p2">支付后才能完成本次订货哦!</p>
                 </div>
                 <div class="OverfullDebt_bottom">
-                    <p><router-link to="/indent">去支付</router-link></p>
+                    <!--<p class="cancel"><a>取消</a></p>--><p><router-link to="/indent">去支付</router-link></p>
                 </div>
             </div>
             <div v-if="exceed" class="shade" id="Index_shade"></div>
@@ -52,23 +52,27 @@
             <!-- 以下是底部导航 -->
             <div class="index_bottom">
                 <div class="index_bottom_left">
-                    <dl>
-                        <dt>
-                            <img src="./assets/img/cart_active.gif"/>
-                        </dt>
-                        <dd><p style="color:#52BE44;">订购</p></dd>
-                    </dl>
+                	<div class="box_left">
+	                    <dl>
+	                        <dt>
+	                            <img src="./assets/img/cart_active.gif"/>
+	                        </dt>
+	                        <dd><p style="color:#52BE44;">订购</p></dd>
+	                    </dl>
+                    </div>
                 </div>
                 <div class="cut-off"></div>
                 <div class="index_bottom_right">
-                    <dl>
-                    	<router-link to="/indent">
-	                        <dt>
-	                            <img src="./assets/img/bill.gif"/>
-	                        </dt>
-	                        <dd><p>账单</p></dd>
-                    	</router-link>
-                    </dl>
+                	<router-link to="/indent" class="box_right">
+	                    <dl>
+	                    	
+		                        <dt>
+		                            <img src="./assets/img/bill.gif"/>
+		                        </dt>
+		                        <dd><p>账单</p></dd>
+	                    	
+	                    </dl>
+                    </router-link>
                 </div>
             </div>
             <!-- 底部导航End -->
@@ -146,13 +150,14 @@ module.exports = {
             }
 
             this.$http.post(API_BASE_URL + '/order?token=' +localStorage.token, {buy_items: buy_items}).then(function (res) {
-                if (res.body.err_code == 2001) {
+                if (res.body.err_code == 2001) {//这情况要显示
                     this.exceed = true;
                 } else {
                     this.order_success = true;
                     this.$router.push('/indent')
                 }
             })
+            
         }
     }
 }
