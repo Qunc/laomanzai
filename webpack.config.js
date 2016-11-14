@@ -37,7 +37,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("styles.css"),
+    new webpack.ProvidePlugin({
+      TOKEN: ""
+    })
   ],
   resolve: {
     alias: {
@@ -68,6 +71,27 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
 */
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
+  ])
+} else if (process.env.NODE_ENV === 'test') {
+  module.exports.devtool = '#source-map'
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"test"'
+      },
+      API_BASE_URL: '"http://api-test.shangcars.com"'
+    }),
+    /*
+     new webpack.optimize.UglifyJsPlugin({
+     compress: {
+     warnings: false
+     }
+     }),
+     */
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
