@@ -11,7 +11,7 @@
                     <p class="p2">支付后才能完成本次订货哦!</p>
                 </div>
                 <div class="OverfullDebt_bottom">
-                    <p class="cancel"><a>取消</a></p><p><router-link to="/indent">去支付</router-link></p>
+                    <p v-on:click="OverfullDebt_cancel" class="cancel"><a>取消</a></p><p><router-link to="/indent">去支付</router-link></p>
                 </div>
             </div>
             <div v-if="exceed" class="shade" id="Index_shade"></div>
@@ -158,6 +158,9 @@ module.exports = {
                 }
             })
             
+        },
+        OverfullDebt_cancel: function () {
+        	this.exceed = false;
         }
     }
 }

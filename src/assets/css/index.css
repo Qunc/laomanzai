@@ -322,7 +322,7 @@ user-select: none;
 	font-weight: bold;
 	border-radius: 4px;
 }
-/*.OverfullDebt_bottom .cancel{
+.OverfullDebt_bottom .cancel{
 	box-sizing: border-box;
 	border-right:1px solid #ccc;
 }
@@ -333,7 +333,7 @@ user-select: none;
 	width: 50%;
 	float: left;
 	
-}*/
+}
 .OverfullDebt_bottom p a{
 	color: #52be44;
 	line-height: 4.8rem;
