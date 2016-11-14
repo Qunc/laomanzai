@@ -9,7 +9,7 @@ var Detail = require('./Detail.vue')
 
 var getQueryParam = function (paras) {
     var url = location.href;
-    url = url.substring(0, url.indexOf('#'));  //舍弃#及以后的数据
+    url = url.indexOf('#') == -1 ? url: url.substring(0, url.indexOf('#'));  //舍弃#及以后的数据
     var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&"); //得到?号后面的数据
     //paraString里放的是token=abcde
     var paraObj = {}
