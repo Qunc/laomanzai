@@ -8,9 +8,7 @@ localStorage.setItem('token', '63414ecd410c44deb3626551989cb970');
 //token获取
 var getQueryParam = function (paras) {
   var url = location.href;
-  console.log(url);
   url = url.substring(0, url.indexOf('#'));  //舍弃#及以后的数据
-  console.log(url);
   var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&"); //得到?号后面的数据
   //paraString里放的是token=abcde
   var paraObj = {}
