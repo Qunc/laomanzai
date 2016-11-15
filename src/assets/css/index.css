@@ -533,7 +533,7 @@ section .Detail_Tips{
 .Detail_Tips .Detail_Tips_right{
 	width: /*63.47*/60%;
 	height: 5.7rem;
-	padding-top: 0.75rem;
+	padding-top: 1.6%;
 	float: left;
 	box-sizing: border-box;
 }

@@ -132,7 +132,6 @@ module.exports = {
             var list = document.getElementsByClassName('quantity-input');
 
             if (list[index]) {
-                console.log(list[index])
                 list[index].focus();
             }
         },
