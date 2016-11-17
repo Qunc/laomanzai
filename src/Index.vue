@@ -17,6 +17,7 @@
             <div v-if="exceed" class="shade" id="Index_shade"></div>
             <!-- 超额提示和遮罩层End -->
             <div class="tips"><span>温馨提示：</span>以下的订货量为上笔订货单的数量，如无需更改，请直接点击“一键订货”。</div>
+        	
         </header>
 
         <section style="margin-bottom: 95px;">
@@ -28,10 +29,10 @@
                     <p>{{item.name}}</p>
                     <p class="price">&yen;{{item.price}}</p>
                     <div v-show="!parseInt(item.last_buy_quantity) && !item.edit" class="order_button">
-                        <button v-on:click="edit_item(index)">点击订货</button>
+                        <button v-on:click="edit_item(index)" id="ClickOrder">点击订货</button>
                     </div>
                     <div v-show="parseInt(item.last_buy_quantity) || item.edit" class="order_num">
-                        <span>订货量：<input type="number" v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false" class="quantity-input"/></span>
+                        <span>订货量：<input type="number" v-model="item.last_buy_quantity" v-on:focus="edit_item(index)" v-on:blur="item.edit=false" id="OrderNum_Input" class="quantity-input"/></span>
                         <span>{{item.unit}}</span>
                     </div>
                 </div>
@@ -52,7 +53,7 @@
             <!-- 以下是底部导航 -->
             <div class="index_bottom">
                 <div class="index_bottom_left">
-                	<div class="box_left">
+                	<div class="box_left" id="box_left">
 	                    <dl>
 	                        <dt>
 	                            <img src="./assets/img/cart_active.gif"/>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="cut-off"></div>
                 <div class="index_bottom_right">
-                	<router-link to="/indent" class="box_right">
+                	<router-link to="/indent" class="box_right" id="box_right">
 	                    <dl>
 	                    	
 		                        <dt>

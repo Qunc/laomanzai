@@ -16,7 +16,7 @@
         <section style="margin-bottom: 50px;">
             <div v-for="item in billings">
                 <div class="bill">
-                    <p>需支付总金额：<span class="bill_number">{{item.total_amount}}</span><span>元</span></p><button v-if="!item.is_paied"><a href="/billings/pay">立即支付</a></button>
+                    <p>需支付总金额：<span class="bill_number">{{item.total_amount}}</span><span>元</span></p><button v-if="!item.is_paied" id="NowPay"><a href="/billings/pay">立即支付</a></button>
                 </div>
 
                 <div class="indent_content" v-for="order in item.order_list">
@@ -111,4 +111,5 @@ module.exports = {
         }
     }
 }
+console.log(document.getElementById("Go_indent_details"));
 </script>

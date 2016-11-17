@@ -37,10 +37,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
-    new webpack.ProvidePlugin({
-      TOKEN: ""
-    })
+    new ExtractTextPlugin("styles.css")
   ],
   resolve: {
     alias: {
