@@ -374,11 +374,21 @@ user-select: none;
 	font-size: 16px;
 	font-family: PingFang SC Regular;
 	border-bottom: 1px solid #ccc;
-	
+	position: relative;
 }
 .header_title span{
 	letter-spacing: 1px;
 	line-height: 4.3rem;
+}
+.header_title .span_right{
+	position: absolute;
+	right: 5.60%;
+	color: #b9b9b9;
+	font-size: 1.4rem;
+	font-family: PingFang SC Regular;	
+}
+.header_title .span_right:active{
+	color: #333;
 }
 .bill{
 	width: 90.67%;
@@ -557,6 +567,21 @@ section .details{
 section .details .letter_hack{
 	
 }
+.details .refund{
+	width: 12%;
+	height: 2rem;
+	margin-top: 1.5rem;
+	margin-right: 5.6%;
+	position: absolute;
+	top:0;
+	right:0;
+	border:1px solid #686868;
+	border-radius:4px;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 1.8rem;
+	font-size: 1.2rem;
+}
 .details p{
 	line-height:3rem;
 	font-size: 15px;
@@ -676,3 +701,56 @@ section .indent_bottom p:nth-last-of-type(1){
 	font-size: 16px;
 	color:#fff;
 }	
+/* //////退款////// */
+.Refund_Indent{
+	width: 100%;
+	height: 7.3rem;
+	margin-top: 1.2rem;
+	border-top:1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	font-size: 1.5rem;
+	padding-left: 5.33%;
+	padding-top: 1.5rem;
+	background: #fff;
+}
+.Refund_Indent p{
+	margin-bottom: 1.5rem;
+}
+.Refund_Indent p span{
+	color: #686868;
+	font-family: arial;
+}
+.Refund_Detail{
+	width: 100%;
+	height: 15rem;
+	margin-top: 1.2rem;
+	border-top:1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+	font-size: 1.5rem;
+	padding-left: 5.33%;
+	padding-top: 1.5rem;
+}
+.Refund_Detail .money{
+	width: 100%;
+	height: 5rem;
+	color:#686868;
+}
+.Refund_Detail .money input{
+	border:0;
+	outline: none;
+}
+.Refund_Detail .money input::-webkit-input-placeholder { /* WebKit browsers */ 
+	color:#b9b9b9;
+}
+.Refund_Detail .reason{
+	width: 100%;
+	height: 10rem;
+}
+.Refund_Detail .reason input{
+	border:0;
+	outline: none;
+}
+.Refund_Detail .reason input::-webkit-input-placeholder { /* WebKit browsers */ 
+	color:#b9b9b9;
+}

@@ -6,6 +6,7 @@ var VueResource = require('vue-resource');
 var Index = require('./Index.vue')
 var Indent = require('./Indent.vue')
 var Detail = require('./Detail.vue')
+var Refund = require('./Refund.vue')
 //先设置一个token
 localStorage.setItem('token','63414ecd410c44deb3626551989cb970');
 //如果url有token，就从url获取token
@@ -45,7 +46,8 @@ const router = new VueRouter({
     routes: [
         {path: '/', component: Index },
         {path: '/indent', component: Indent },
-        {name:'detail', path: '/detail/:id', component: Detail}
+        {name:'detail', path: '/detail/:id', component: Detail},
+        {name:'refund',path: '/refund', component: Refund}
     ]
 });
 

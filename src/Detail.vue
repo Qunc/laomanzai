@@ -26,6 +26,8 @@
         		
         	</div>
             <div class="details">
+            	<router-link :to="{name:'refund'}">
+            	<div class="refund">退 款</div></router-link>
                 <p>订单编号：<span class="num_size_hack">{{order.order_id}}</span></p>
                 <p>订货时间：<span class="num_size_hack">{{order.created_at}}</span></p>
                 <p>配送日期：<span class="num_size_hack">{{order.delivery_date}}</span></p>
@@ -37,9 +39,9 @@
                 <p>{{item.name}}<span class="indent_bottom_right indent_bottom_right_price">&yen;：{{item.price*100*item.quantity/100}}</span></p>
                 <p> <span>单位：{{item.unit}}</span>
 					<span v-if="order.can_edit" class="indent_bottom_right edit_num_box">
-						<div id="min" class="min" v-on:click="detail_min(index)"><img src="../img/jian.gif"/></div>
+						<div id="min" class="min" v-on:click="detail_min(index)"><img src="./assets/img/jian.gif" /></div>
 						<div id="edit_num" class="edit_num"><input class="input_number" type="number" v-model="item.quantity" /></div>
-						<div id="add"  class="add" v-on:click="detail_add(index)"><img src="../img/jia.gif"/></div>	
+						<div id="add" class="add" v-on:click="detail_add(index)"><img src="./assets/img/jia.gif" /></div>	
 					</span>
 					
 						
