@@ -27,7 +27,8 @@
         	</div>
             <div class="details">
             	<router-link :to="{name:'refund'}">
-            	<div class="refund">退 款</div></router-link>
+            		<div class="refund" v-if="!order.can_edit">退 款</div>
+            	</router-link>
                 <p>订单编号：<span class="num_size_hack">{{order.order_id}}</span></p>
                 <p>订货时间：<span class="num_size_hack">{{order.created_at}}</span></p>
                 <p>配送日期：<span class="num_size_hack">{{order.delivery_date}}</span></p>
