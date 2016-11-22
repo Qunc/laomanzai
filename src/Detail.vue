@@ -1,15 +1,15 @@
 <template>
     <div>
         <header class="header_title">
-		<!-- 订货成功提示和遮罩层 -->
+		<!-- 修改成功提示和遮罩层 -->
 			<div v-if="edit_success_tips">
-	            <div   class="OverfullDebt success-tips" id="Indent_OverfullDebt">
+	            <div class="OverfullDebt" id="Indent_OverfullDebt">
 	                <img src="./assets/img/Order_success.gif"/>
 	                <p class="Order_Success_Text">修改成功</p>
 	            </div>
 	            <div class="shade success-tips" id="Indent_shade"></div>
             </div>
-        <!-- 订货成功提示和遮罩层 End-->
+        <!-- 修改成功提示和遮罩层 End-->
             <img src="./assets/img/left.png" v-on:click="detail_back" /><span>订单详情</span>
 			
         </header>
@@ -26,7 +26,7 @@
         		
         	</div>
             <div class="details">
-            	<router-link :to="{name:'refund'}">
+            	<router-link :to="{path:'/refund/' + order.order_id}">
             		<div class="refund" v-if="!order.can_edit">退 款</div>
             	</router-link>
                 <p>订单编号：<span class="num_size_hack">{{order.order_id}}</span></p>
@@ -54,18 +54,7 @@
                 </p>
                 <div class="border_bottom"></div>
             </div>
-            <!--以下是第二个订单，可以删除.-->
-            <!--<div class="indent_bottom">
-                <p>北方馒头（方）<span class="indent_bottom_right">X2</span></p>
-                <p>品类：紫薯味<span style="margin-left: 10px;">单位：包</span>
-                              <span class="indent_bottom_right">
-                                      <span>&yen;：</span><span>19.8</span>
-                              </span>
-                </p>
-                <div class="border_bottom"></div>
-            </div>-->
-
-
+           
 
         </section>
         <footer v-if="order.can_edit">

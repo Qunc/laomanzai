@@ -47,7 +47,7 @@ const router = new VueRouter({
         {path: '/', component: Index },
         {path: '/indent', component: Indent },
         {name:'detail', path: '/detail/:id', component: Detail},
-        {name:'refund',path: '/refund', component: Refund}
+        {name:'refund', path: '/refund/:id', component: Refund}
     ]
 });
 

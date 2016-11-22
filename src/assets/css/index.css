@@ -380,7 +380,7 @@ user-select: none;
 	letter-spacing: 1px;
 	line-height: 4.3rem;
 }
-.header_title .span_right{
+/*.header_title .span_right{
 	position: absolute;
 	right: 5.60%;
 	color: #b9b9b9;
@@ -389,7 +389,7 @@ user-select: none;
 }
 .header_title .span_right:active{
 	color: #333;
-}
+}*/
 .bill{
 	width: 90.67%;
 	height:6.8rem;
@@ -436,11 +436,21 @@ user-select: none;
 	background: #ff461d;
 	color:#fff;
 	font-size:14px;
+	-webkit-user-select: none; /* Chrome all / Safari all */
+-moz-user-select: none; /* Firefox all */
+-ms-user-select: none; /* IE 10+ */ /* No support for these yet, use at own risk */
+-o-user-select: none;
+user-select: none; 
 }
 .bill button a{
 	color: #fff;
 	text-decoration: none;
 	font-family: PingFang SC Medium;
+	-webkit-user-select: none; /* Chrome all / Safari all */
+-moz-user-select: none; /* Firefox all */
+-ms-user-select: none; /* IE 10+ */ /* No support for these yet, use at own risk */
+-o-user-select: none;
+user-select: none; 
 }
 .indent{
 	width:100%;
@@ -700,21 +710,25 @@ section .indent_bottom p:nth-last-of-type(1){
 	text-align: center;
 	font-size: 16px;
 	color:#fff;
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }	
 /* //////退款////// */
 .Refund_Indent{
 	width: 100%;
-	height: 7.3rem;
+	height: 7.5rem;
 	margin-top: 1.2rem;
 	border-top:1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	font-size: 1.5rem;
 	padding-left: 5.33%;
-	padding-top: 1.5rem;
+	padding-top: 1.2rem;
 	background: #fff;
 }
 .Refund_Indent p{
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.7rem;
 }
 .Refund_Indent p span{
 	color: #686868;
@@ -733,8 +747,16 @@ section .indent_bottom p:nth-last-of-type(1){
 }
 .Refund_Detail .money{
 	width: 100%;
-	height: 5rem;
+	height: 3.5rem;
 	color:#686868;
+}
+.Refund_Detail .line_between{
+	width: 100%;
+	height:1px;
+	background: #ccc;
+	position:absolute;
+	left:0;
+	margin-bottom: 1.2rem;
 }
 .Refund_Detail .money input{
 	border:0;
@@ -747,9 +769,14 @@ section .indent_bottom p:nth-last-of-type(1){
 	width: 100%;
 	height: 10rem;
 }
-.Refund_Detail .reason input{
+.Refund_Detail .reason textarea{
 	border:0;
 	outline: none;
+	resize:none;
+
+	width: 88.8%;
+	height: 9rem;
+	margin:0 auto;
 }
 .Refund_Detail .reason input::-webkit-input-placeholder { /* WebKit browsers */ 
 	color:#b9b9b9;
