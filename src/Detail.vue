@@ -2,12 +2,12 @@
     <div>
         <header class="header_title">
 		<!-- 修改成功提示和遮罩层 -->
-			<div v-if="edit_success_tips">
+			<div v-show="edit_success_tips">
 	            <div class="OverfullDebt" id="Indent_OverfullDebt">
 	                <img src="./assets/img/Order_success.gif"/>
 	                <p class="Order_Success_Text">修改成功</p>
 	            </div>
-	            <div class="shade success-tips" id="Indent_shade"></div>
+	            <div v-show="edit_success_tips" class="shade success-tips" id="Indent_shade"></div>
             </div>
         <!-- 修改成功提示和遮罩层 End-->
             <img src="./assets/img/left.png" v-on:click="detail_back" /><span>订单详情</span>

@@ -16,6 +16,16 @@
             </div>
             <div v-if="exceed" class="shade" id="Index_shade"></div>
             <!-- 超额提示和遮罩层End -->
+            
+            <!-- 一键下单失败提示和遮罩层 -->
+			<div v-show="edit_success_tips">
+	            <div class="OverfullDebt" id="Indent_OverfullDebt">
+	                <img src="./assets/img/Order_success.gif"/>
+	                <p class="Order_Success_Text phack" id="refund_tiptext">下单失败，如有疑问请联系客服</p>
+	            </div>
+	            <div class="shade success-tips" id="Indent_shade"></div>
+            </div>
+        	<!-- 一键下单失败提示和遮罩层 End-->
             <div class="tips"><span>温馨提示：</span>以下的订货量为上笔订货单的数量，如无需更改，请直接点击“一键订货”。</div>
         	
         </header>
@@ -93,7 +103,8 @@ module.exports = {
             loading: true,
             product_list: [],
             exceed: false, //超额
-            order_success: false //订单成功标志
+            order_success: false, //订单成功标志
+            edit_success_tips: false //
         }
     },
     created: function () {
@@ -150,11 +161,18 @@ module.exports = {
             }
 
             this.$http.post(API_BASE_URL + '/order?token=' +localStorage.token, {buy_items: buy_items}).then(function (res) {
-                if (res.body.err_code == 2001) {//这情况要显示
+                if (res.body.err_code == 2001) {//这情况要显示超额提示
                     this.exceed = true;
-                } else {
+                } else if(res.body.err_code == 0){
                     this.order_success = true;
                     this.$router.push('/indent')
+                }else{
+//              	document.getElementById('refund_tiptext').innerHTML = 
+                	this.edit_success_tips = true;
+        			var self = this;
+        			setTimeout(function () {
+        				self.edit_success_tips = false;
+        			}, 3000)
                 }
             })
             

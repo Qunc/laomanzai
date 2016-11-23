@@ -3,11 +3,11 @@
     <div>
         <header class="header_title">
             <!-- 订货成功提示和遮罩层 -->
-            <div  v-if="$route.params.order_success_tips" class="OverfullDebt success-tips" id="Indent_OverfullDebt">
+            <div  v-if="$route.params.order_success_tips" class="OverfullDebt success-tips" id="Indent_Overfull">
                 <img src="./assets/img/Order_success.gif"/>
                 <p class="Order_Success_Text">订货成功</p>
             </div>
-            <div  v-if="$route.params.order_success_tips" class="shade success-tips" id="Indent_shade"></div>
+            <div  v-if="$route.params.order_success_tips" class="shade success-tips" id="Indent_Shade"></div>
             <!-- 订货成功提示和遮罩层 End-->
 
             <span>我的账单</span>
@@ -75,13 +75,19 @@ module.exports = {
     created: function () {
         this.fetchData();
         setTimeout(function(){
-            var nodes = document.getElementsByClassName('success-tips');
-            for (i in nodes) {
-                node = nodes[i];
-                if (node.style) {
-                    node.style.display = 'none';
-                }
-            }
+//          var nodes = document.getElementsByClassName('success-tips');
+//          for (i in nodes) {
+//              node = nodes[i];
+//              if (node.style) {
+//                  node.style.display = 'none';
+//              }
+//          }
+			var Indent_Shade = document.getElementById('Indent_Shade');
+			var Indent_Overfull = document.getElementById('Indent_Overfull');
+				if (Indent_Shade && Indent_Overfull) {
+					Indent_Shade.style.display = 'none';
+					Indent_Overfull.style.display = 'none';
+				}
         }, 3000)
     },
     methods: {

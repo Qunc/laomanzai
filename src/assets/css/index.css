@@ -364,6 +364,10 @@ user-select: none;
 	font-size: 17px;
 	font-family: PingFang SC Medium;
 }
+.Order_Success_Text.phack{
+	left:22%;
+	top:76%;
+}
 /* /////订货成功弹出框End//////*/
 
 .header_title{
