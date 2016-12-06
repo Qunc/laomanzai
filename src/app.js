@@ -8,7 +8,7 @@ var Indent = require('./Indent.vue')
 var Detail = require('./Detail.vue')
 var Refund = require('./Refund.vue')
 //先设置一个token
-localStorage.setItem('token','63414ecd410c44deb3626551989cb970');
+localStorage.setItem('token','a153007bb05bb2fb3eb3fcd0e2e64acc');
 //如果url有token，就从url获取token
 var getQueryParam = function (paras) {
     var url = location.href;
